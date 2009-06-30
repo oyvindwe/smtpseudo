@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mail-template SYSTEM "mail-template.dtd">
+<mail-template dir="/usr/local/smtpseudo/lib/template" template_buffer="3000000">
+    <template id="mail_01"
+                 title="連絡先に追加されました"
+                 charset="ISO-2022-JP"
+                 x-priority="3">
+        <text transfer_encoding="7bit" charset="ISO-2022-JP">
+            <file src="mail_01.txt" encoding="MS932"/>
+        </text>
+    </template>
+    <template id="mail_02"
+              title="グリーティングカードが届きました。"
+              charset="ISO-2022-JP"
+              x-priority="3">
+        <text  transfer_encoding="7bit" charset="ISO-2022-JP">
+            <file src="mail_02.txt" encoding="MS932"/>
+        </text>
+    </template>
+    <template id="mail_03"
+              title="メッセージが届きました"
+              charset="ISO-2022-JP"
+              x-priority="3">
+        <text transfer_encoding="7bit" charset="ISO-2022-JP">
+            <file src="mail_03.txt" encoding="MS932"/>
+        </text>
+    </template>
+    <template id="mail_07"
+              title="パスワードを変更しました"
+              charset="ISO-2022-JP"
+              x-priority="3">
+        <text transfer_encoding="7bit" charset="ISO-2022-JP">
+            <file src="mail_07.txt" encoding="MS932"/>
+        </text>
+    </template>
+    <template id="mail_08"
+              title="パスワード再発行"
+              charset="ISO-2022-JP"
+              x-priority="3">
+        <text charset="ISO-2022-JP" transfer_encoding="7bit">
+            <file src="mail_08.txt" encoding="MS932"/>
+        </text>
+    </template>
+    <template id="mail_09"
+              title="秘密の質問の再設定"
+              charset="ISO-2022-JP"
+              x-priority="3">
+        <text charset="ISO-2022-JP" transfer_encoding="7bit">
+            <file src="mail_09.txt" encoding="MS932"/>
+        </text>
+    </template>
+</mail-template>

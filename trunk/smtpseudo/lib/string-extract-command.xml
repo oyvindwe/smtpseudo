@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE string-extract-command SYSTEM "string-extract-command.dtd">
+<string-extract-command receive_buffer="5000000">
+    <command id="mail.cmdOnHtml" encoding="UTF-8">
+        <head>
+            <suffix><![CDATA[<head>]]></suffix>
+        </head>
+        <around name="SenderName">
+            <prefix><![CDATA[.html">]]></prefix>
+            <suffix><![CDATA[</a>]]></suffix>
+        </around>
+        <tail>
+            <prefix><![CDATA[</body>]]></prefix>
+        </tail>
+    </command>
+    <command id="mail_01.cmdOnHtml" encoding="UTF-8">
+        <around name="SenderName">
+            <prefix><![CDATA[.html">]]></prefix>
+            <suffix><![CDATA[</a>]]></suffix>
+        </around>
+    </command>
+    <command id="mail_02.cmdOnHtml" encoding="UTF-8">
+        <around name="ecard">
+            <prefix><![CDATA[<p> You&#39;ve received an <a href="]]></prefix>
+            <suffix><![CDATA[">]]></suffix>
+        </around>
+        <around name="SenderName">
+            <prefix><![CDATA[new e-card</a> from <strong> ]]></prefix>
+            <suffix><![CDATA[</strong>. </p>]]></suffix>
+        </around>
+    </command>
+    <command id="mail_08.cmdOnHtml" encoding="UTF-8">
+        <around name="urllink">
+            <prefix><![CDATA[If the link above does not work, please copy the link below and paste it into your Internet browser:<br>]]></prefix>
+            <suffix><![CDATA[<br><br>If you did not request a new password, please ignore this email. If you have any further questions, please contact us by responding to this email.<br><br>]]></suffix>
+        </around>
+    </command>
+    <command id="mail_09.cmdOnText" encoding="UTF-8">
+        <around name="urllink">
+            <prefix><![CDATA[1. Click the link below to start:<CR><LF>]]></prefix>
+            <suffix>2. Set a security question and answer</suffix>
+        </around>
+    </command>
+</string-extract-command>

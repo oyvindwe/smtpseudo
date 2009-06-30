@@ -1,0 +1,19 @@
+<!ELEMENT mail-template (template+)>
+<!ATTLIST mail-template dir CDATA #IMPLIED>
+<!ATTLIST mail-template template_buffer CDATA #IMPLIED>
+<!ELEMENT template (text | html | multipart)>
+<!ATTLIST template id ID #REQUIRED>
+<!ATTLIST template title CDATA #IMPLIED>
+<!ATTLIST template charset CDATA #REQUIRED>
+<!ATTLIST template x-priority CDATA #IMPLIED>
+<!ELEMENT multipart (text,html)>
+<!ELEMENT text (file)>
+<!ATTLIST text charset CDATA #REQUIRED>
+<!ATTLIST text transfer_encoding (7bit|quoted-printable|base64|8bit) #REQUIRED>
+<!ELEMENT html (file)>
+<!ATTLIST html charset CDATA #REQUIRED>
+<!ATTLIST html transfer_encoding CDATA #REQUIRED>
+<!ELEMENT file EMPTY>
+<!ATTLIST file src CDATA #REQUIRED>
+<!ATTLIST file encoding CDATA #REQUIRED>
+

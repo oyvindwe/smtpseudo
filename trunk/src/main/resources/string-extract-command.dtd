@@ -1,0 +1,12 @@
+<!ELEMENT string-extract-command (command+)>
+<!ATTLIST string-extract-command receive_buffer CDATA #IMPLIED>
+<!ELEMENT command (head?,around+,tail?) >
+<!ATTLIST command id ID #REQUIRED>
+<!ATTLIST command encoding CDATA #REQUIRED>
+<!ATTLIST command scope CDATA #IMPLIED>
+<!ELEMENT around (prefix,suffix)>
+<!ATTLIST around name CDATA #REQUIRED>
+<!ELEMENT prefix (#PCDATA)>
+<!ELEMENT suffix (#PCDATA)>
+<!ELEMENT head (suffix)>
+<!ELEMENT tail (prefix)>
