@@ -1,0 +1,20 @@
+<!ELEMENT mail-forwarder (forwarder)+>
+<!ATTLIST mail-forwarder dumpster CDATA #REQUIRED>
+<!ELEMENT forwarder ((ifFrom,mail?,((address+|lookup)|(address+,lookup)))|(ifFound,mail?,((address+|lookup)|(address+,lookup))))>
+<!ATTLIST forwarder from CDATA #REQUIRED>
+<!ELEMENT lookup EMPTY>
+<!ATTLIST lookup field (subscriber_email_address|sales) #REQUIRED>
+<!ELEMENT ifFrom (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ATTLIST address type (TO|CC|BCC) #REQUIRED>
+<!ELEMENT ifFound (inTitle|(inText|inHtml)|((inText,inHtml)|(inHtml,inText)))>
+<!ELEMENT inTitle (#PCDATA)>
+<!ELEMENT inText (#PCDATA)>
+<!ELEMENT inHtml (#PCDATA)>
+<!ATTLIST inTitle charset CDATA #REQUIRED>
+<!ATTLIST inText charset CDATA #REQUIRED>
+<!ATTLIST inHtml charset CDATA #REQUIRED>
+<!ELEMENT mail EMPTY>
+<!ATTLIST mail useTemplate CDATA #REQUIRED>
+<!ATTLIST mail cmdOnText CDATA #IMPLIED>
+<!ATTLIST mail cmdOnHtml CDATA #IMPLIED>

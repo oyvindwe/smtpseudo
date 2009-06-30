@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mail-forwarder SYSTEM "mail-forwarder.dtd">
+<mail-forwarder dumpster="admin@somecompany.com">
+    <forwarder from="info@somecompany.com">
+        <ifFound>
+            <inHtml charset="UTF-8">has added you to his contact list, so please</inHtml>
+        </ifFound>
+        <mail useTemplate="mail_01" cmdOnHtml="mail_01.cmdOnHtml"/>
+        <address type="TO">somebody@gmail.com</address>
+        <lookup field="sales"/>
+    </forwarder>
+    <forwarder from="info@somecompany.com">
+        <ifFound>
+            <inText charset="UTF-8"><![CDATA[You've received an e-card! from]]></inText>
+        </ifFound>
+        <mail useTemplate="mail_02" cmdOnHtml="mail_02.cmdOnHtml"/>
+        <address type="TO">somebody@gmail.com</address>
+    </forwarder>
+    <forwarder from="info@somecompany.com">
+        <ifFound>
+            <inText charset="UTF-8">You've received a new message in</inText>
+        </ifFound>
+        <mail useTemplate="mail_03"/>
+        <address type="TO">somebody@gmail.com</address>
+    </forwarder>
+    <forwarder from="info@somecompany.com">
+        <ifFound>
+            <inTitle charset="UTF-8">New Password Update Notification</inTitle>
+        </ifFound>
+        <mail useTemplate="mail_07"/>
+        <address type="TO">somebody@gmail.com</address>
+    </forwarder>
+    <forwarder from="info@somecompany.com">
+        <ifFound>
+            <inTitle charset="UTF-8">Set a New Password</inTitle>
+        </ifFound>
+        <mail useTemplate="mail_08" cmdOnHtml="mail_08.cmdOnHtml"/>
+        <address type="TO">somebody@gmail.com</address>
+    </forwarder>
+    <forwarder from="info@somecompany.com">
+        <ifFound>
+            <inTitle charset=""><![CDATA[How to Set a New Security Question & Password]]></inTitle>
+        </ifFound>
+        <mail useTemplate="mail_09" cmdOnText="mail_09.cmdOnText"/>
+        <address type="TO">somebody@gmail.com</address>
+    </forwarder>
+</mail-forwarder>
